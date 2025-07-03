@@ -1,25 +1,43 @@
-# Spring Product Manager
+# 🏷️ Spring Product Manager
 
-A web application to manage products using Spring Boot, Spring MVC, Spring Security, Thymeleaf, and JPA (H2/MySQL).
+Une application web de gestion de produits développée avec Spring Boot, Spring MVC, Spring Security, Thymeleaf, Bootstrap et JPA (H2/MySQL).
 
-## Features
+---
 
-- Product listing, addition, deletion, and update
-- Form validation
-- Secure access with Spring Security
-- Thymeleaf layout templates
-- Product search functionality
+## 📸 Aperçu
 
-## Stack
+![Liste des produits](captures/products.jpg)
 
-- Spring Boot
-- Spring MVC
-- Spring Security
-- Spring Data JPA
-- Thymeleaf
-- H2 / MySQL
-- Bootstrap
+---
 
-## Author
+## ✅ Fonctionnalités
 
-Mohamed Youssfi – Activité Pratique N°2
+- ✅ Affichage de la liste des produits
+- ✅ Ajout, modification, suppression de produits
+- ✅ Formulaire de saisie avec validations
+- ✅ Authentification sécurisée avec Spring Security
+- ✅ Layout responsive avec navbar, footer, fragments Thymeleaf
+- ✅ Déconnexion avec icône
+- ✅ Intégration de Bootstrap Icons
+- ✅ Responsive sur mobile avec menu hamburger
+
+---
+
+## 🛠️ Technologies utilisées
+
+| Couche      | Technologies                                  |
+|-------------|-----------------------------------------------|
+| Backend     | Spring Boot, Spring MVC, Spring Data JPA      |
+| Frontend    | Thymeleaf, Bootstrap 5, Bootstrap Icons       |
+| Sécurité    | Spring Security                               |
+| Base de données | H2 (dev) / MySQL (prod)                  |
+| Autres      | Thymeleaf Layout Dialect                      |
+
+---
+
+## 🚀 Démarrer le projet
+
+1. Cloner le repo :
+```bash
+git clone https://github.com/LAMBARAA-Abdellah/springboot-thymeleaf-security
+cd spring-product-manager
