@@ -4,6 +4,7 @@ import jakarta.validation.Valid;
 import org.example.secureproductmanager.entities.Product;
 import org.example.secureproductmanager.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -32,6 +33,7 @@ public class ProductController {
     }
 
     @GetMapping("/admin/create")
+    //@PreAuthorize("hasRole('ADMIN')")
     public String createForm(Model model) {
         model.addAttribute("product", new Product());
         model.addAttribute("formTitle", "➕ Ajouter un nouveau produit");
