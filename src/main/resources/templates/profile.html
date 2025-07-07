@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorate="~{layout}">
+
+<head>
+    <title>Mon Profil</title>
+</head>
+
+<body>
+<div layout:fragment="content">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow text-center">
+                <div class="card-header bg-primary text-white">
+                    <h3>👤 Profil Utilisateur</h3>
+                </div>
+                <div class="card-body">
+                    <!-- Avatar -->
+                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="rounded-circle mb-3" width="120" alt="Avatar">
+
+                    <!-- Infos utilisateur -->
+                    <h4 class="card-title mb-2" sec:authentication="name">Nom</h4>
+                    <p class="card-text text-muted">Email : <span sec:authentication="principal.username">email@example.com</span></p>
+                    <p class="card-text">Rôles :
+                        <span sec:authorize="hasRole('ADMIN')" class="badge bg-success">ADMIN</span>
+                        <span sec:authorize="hasRole('USER')" class="badge bg-info text-dark">USER</span>
+                    </p>
+
+                    <!-- Retour -->
+                    <a href="/" class="btn btn-outline-secondary mt-3">↩ Retour à l'accueil</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
